@@ -1,0 +1,43 @@
+---
+title: "Week 8 Assignment"
+output: html_document
+date: "2022-10-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+load packages
+```{r}
+library(XML)
+library(RCurl)
+library(jsonlite)
+```
+
+load data html
+```{r}
+htmlurl <- getURL("https://raw.githubusercontent.com/arinolan/Week-8-Assignment/main/books_html")
+x <- readHTMLTable(htmlurl)
+df_html<-data.frame(x)
+colnames(df_html)<-c("title", "author", "year", "price")
+df_html
+```
+
+load data xml
+```{r}
+xmlurl <- getURL("https://raw.githubusercontent.com/arinolan/Week-8-Assignment/main/books")
+y <- xmlParse(xmlurl)
+df_xml <- xmlToDataFrame(y)
+df_xml
+```
+
+load data json (couldn't get this to work but here is the code i tried to use..)
+
+jsonurl <- getURL("https://raw.githubusercontent.com/arinolan/Week-8-Assignment/main/books_json")
+df_json <- fromJSON(jsonurl)
+df_json
+
+
+
+after loading and formating the three different files types, we can see that the dataframes are identical. 
