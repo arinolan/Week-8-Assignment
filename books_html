@@ -1,0 +1,21 @@
+<html>
+<Books>
+    <book>
+        <title>The Poisonwood Bible</title>
+        <author>Barbara Kingsolver</author>
+        <year>1998</year>
+        <price>12.39</price>
+    </book>
+    <book>
+        <title>A Fire Sparkling</title>
+        <author>Julianna MacLean</author>
+        <year>2019</year>
+        <price>10.99</price>
+    </book>
+    <book>
+        <title>My Dear Hamilton</title>
+        <author>Stephanie Dray, Laura Kamoie</author>
+        <year>2018</year>
+        <price>12.66</price>
+    </book>
+</Books>
